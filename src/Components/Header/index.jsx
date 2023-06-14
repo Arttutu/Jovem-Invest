@@ -1,19 +1,15 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import {GrMoney} from "react-icons/gr"
-import { Branco, Font, VerdeClaro } from '../UI/variaveis'
+import { Branco, Font, VerdeClaro, VerdeEscuro2 } from '../UI/variaveis'
+import { Box } from '../UI'
 
 const HeaderStyle = styled.header`
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
-    z-index: 5;
-    display: flex;
-    justify-content: space-between;
-    background-color: ${VerdeClaro} ;
+    width: 100%;
+    background-color: ${VerdeEscuro2} ;
     padding: 20px;
-    border-radius: 20px;
-    margin-top: 20px;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 10px #0000003f ;
 `
 const BoxLogo = styled.div`
     display: flex;
@@ -22,6 +18,10 @@ const BoxLogo = styled.div`
     color: ${Branco};
     font-family: ${Font};
     font-weight: 900;
+    .icone{
+      color: ${Branco};
+      font-size: 35px;
+    }
 `
 const Lista = styled.ul`
     display: flex;
@@ -39,18 +39,20 @@ const ListaItem = styled.li`
 export default function Header() {
   return (
     <HeaderStyle>
+      <Box>
         <BoxLogo>
-            Fintech APP
-           <GrMoney size="25" color='#fff'/>
+              <h2>Home</h2>
+            <GrMoney  className='icone'/>
         </BoxLogo>
-      <nav>
-        <Lista>
-            <ListaItem>Login</ListaItem>
-            <ListaItem>Cadastre</ListaItem>
-            <ListaItem>Sobre Nós</ListaItem>
-            <ListaItem>Fale Conosco</ListaItem>
-        </Lista>
-      </nav>
+        <nav>
+          <Lista>
+              <ListaItem>Login</ListaItem>
+              <ListaItem>Cadastre</ListaItem>
+              <ListaItem>Sobre Nós</ListaItem>
+          </Lista>
+        </nav>
+      </Box>
+   
     </HeaderStyle>
   )
 }

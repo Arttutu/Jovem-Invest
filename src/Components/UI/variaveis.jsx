@@ -1,3 +1,6 @@
 export const  VerdeClaro = "#568613"
+export const VerdeClaro2 = "#59e54d"
+export const VerdeEscuro1 = "#0a2d06"
+export const VerdeEscuro2 = "#13590d"
 export const Branco = "#f4fce9"
 export const Font = "'Prompt', sans-serif;"
