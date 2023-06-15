@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import { Font } from '../UI/variaveis'
-import { BotaoPrincipal } from '../UI'
+import { BotaoPrincipal, Titulo } from '../UI'
 const BoxForm = styled.div`
     display: flex;
     justify-content: center;
@@ -22,8 +22,9 @@ const InputStyle = styled.input`
 `
 export default function Formulario() {
   return (
-   
+   <>
     <BoxForm>
+     
         <FormStyle>
             <LabelStyle >Nome Completo:</LabelStyle>
             <InputStyle type="text" id="fname" name="fname" />
@@ -35,9 +36,11 @@ export default function Formulario() {
             <InputStyle type="password" id="lname" name="lname" />
             <LabelStyle>Repita a senha:</LabelStyle>
             <InputStyle type="password" id="lname" name="lname" />
-            <BotaoPrincipal></BotaoPrincipal>
+            <BotaoPrincipal>Enviar</BotaoPrincipal>
         </FormStyle>
     </BoxForm>
   
+   </>
+
   )
 }

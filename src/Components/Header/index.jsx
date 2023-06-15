@@ -1,8 +1,8 @@
 import React from 'react'
 import { styled } from 'styled-components'
-import {GrMoney} from "react-icons/gr"
-import { Branco, Font, VerdeClaro, VerdeEscuro2 } from '../UI/variaveis'
-import { Box } from '../UI'
+import { Branco, Font, VerdeEscuro2 } from '../UI/variaveis'
+import { Box, Lista, Logo } from '../UI'
+import {RxHamburgerMenu} from "react-icons/rx"
 
 const HeaderStyle = styled.header`
     width: 100%;
@@ -14,21 +14,26 @@ const HeaderStyle = styled.header`
 const BoxLogo = styled.div`
     display: flex;
     align-items: center;
-    gap: 1em;
+    justify-content: space-between;
+    width: 100%;
     color: ${Branco};
     font-family: ${Font};
     font-weight: 900;
-    .icone{
-      color: ${Branco};
-      font-size: 35px;
+    > svg{
+        font-size: 30px;
+        color: ${Branco};
+        display: none;
+        @media (max-width:768px){
+          display: block;
+        
+      }
     }
 `
-const Lista = styled.ul`
-    display: flex;
-    align-items: center;
-    list-style: none;
-    cursor: pointer;
-    gap: 2rem;
+const BoxNav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 `
 const ListaItem = styled.li`
     font-size: 1.4;
@@ -36,21 +41,26 @@ const ListaItem = styled.li`
     color: ${Branco};
     font-family: ${Font};
 `
-export default function Header() {
+
+export default function Header({setMenuOpen}) {
   return (
     <HeaderStyle>
       <Box>
-        <BoxLogo>
-              <h2>Home</h2>
-            <GrMoney  className='icone'/>
-        </BoxLogo>
-        <nav>
-          <Lista>
-              <ListaItem>Login</ListaItem>
-              <ListaItem>Cadastre</ListaItem>
-              <ListaItem>Sobre Nós</ListaItem>
-          </Lista>
-        </nav>
+        <BoxNav>
+          <BoxLogo>
+                <Logo>Home</Logo>  
+                <RxHamburgerMenu onClick={() => setMenuOpen(true)} />          
+          </BoxLogo>
+          <nav>
+            <Lista>
+                <ListaItem>Login</ListaItem>
+                <ListaItem>Cadastre</ListaItem>
+                <ListaItem >SobreNós</ListaItem>
+                
+            </Lista>
+          </nav>
+        </BoxNav>
+      
       </Box>
    
     </HeaderStyle>
