@@ -1,9 +1,12 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import { Font } from '../UI/variaveis'
-import { BotaoPrincipal } from '../UI'
+import { BotaoPrincipal, Titulo } from '../UI'
 const BoxForm = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
     justify-content: center;
     width: 50%;  
     @media (max-width:768px){
@@ -38,7 +41,7 @@ export default function Formulario() {
   return (
    <>
     <BoxForm>
-     
+        <Titulo cadastro >Faça seu Cadastro</Titulo>
         <FormStyle>
             <LabelStyle >Nome Completo:</LabelStyle>
             <InputStyle type="text" id="fname" name="fname" />

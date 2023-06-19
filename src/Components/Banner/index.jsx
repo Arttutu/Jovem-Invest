@@ -8,6 +8,7 @@ import { VerdeEscuro2 } from '../UI/variaveis'
 const BoxBanner = styled.div `
     display: flex;
     align-items: center;
+    
     padding-top: 100px;
     gap:2em;
     @media (max-width:768px){

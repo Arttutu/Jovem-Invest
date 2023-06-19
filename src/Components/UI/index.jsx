@@ -7,7 +7,7 @@ export const Box = styled.div`
 `
 export const Titulo = styled.h1`
     color: ${VerdeEscuro2};
-    font-size: 5em;
+    font-size: ${({cadastro}) => (cadastro ? "3em": "5em")};
     font-style: ${Font};
     
 `
