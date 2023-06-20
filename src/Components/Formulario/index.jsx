@@ -1,17 +1,17 @@
 import React from 'react'
 import { styled } from 'styled-components'
-import { Font } from '../UI/variaveis'
+import { Font, VerdeClaro2, VerdeEscuro1 } from '../UI/variaveis'
 import { BotaoPrincipal, Titulo } from '../UI'
+import {AiFillTwitterCircle, AiFillGoogleCircle, AiFillFacebook} from "react-icons/ai"
 const BoxForm = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap:2rem;
     justify-content: center;
     width: 50%;  
     @media (max-width:768px){
         width: 100%;
-    
     }
 `
 const FormStyle = styled.form`
@@ -36,6 +36,18 @@ const InputStyle = styled.input`
         
     }
 `
+const BoxIcones = styled.div`
+margin-top: 2em;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    cursor: pointer;
+    >svg{
+        transform: .7s;
+        font-size: 35px;
+        color: ${VerdeEscuro1};
+    }
+`
 
 export default function Formulario() {
   return (
@@ -53,7 +65,12 @@ export default function Formulario() {
             <InputStyle type="password" id="lname" name="lname" />
             <LabelStyle>Repita a senha:</LabelStyle>
             <InputStyle type="password" id="lname" name="lname" />
+            <BoxIcones>
+                <AiFillFacebook />
+                <AiFillGoogleCircle />
+                <AiFillTwitterCircle />
             <BotaoPrincipal>Enviar</BotaoPrincipal>
+            </BoxIcones>
         </FormStyle>
     </BoxForm>
   

@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { Branco, Font, VerdeClaro2, VerdeEscuro2 } from "./variaveis";
+import { Branco, Font, VerdeClaro2, VerdeEscuro1, VerdeEscuro2 } from "./variaveis";
 
 export const Box = styled.div`
     max-width: 1440px;
@@ -20,6 +20,12 @@ export const BotaoPrincipal = styled.button`
     font-size: 1.2em;
     font-family: ${Font};
     color: ${Branco};
+    transition: all.7s;
+    &:hover{
+        background-color: ${VerdeEscuro1};
+        scale: 1.1;
+
+    }
 `
 export const Lista = styled.ul`
     display: flex;
