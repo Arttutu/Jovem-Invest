@@ -9,6 +9,7 @@ export const Titulo = styled.h1`
     color: ${VerdeEscuro2};
     font-size: ${({cadastro}) => (cadastro == "true" ? "3em": "5em")};
     font-style: ${Font};
+    text-align: center;
     
 `
 export const BotaoPrincipal = styled.button`

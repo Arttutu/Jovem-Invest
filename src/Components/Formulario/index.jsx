@@ -1,12 +1,13 @@
 import React from 'react'
 import { styled } from 'styled-components'
-import { Font, VerdeClaro2, VerdeEscuro1 } from '../UI/variaveis'
+import { Font, VerdeEscuro1 } from '../UI/variaveis'
 import { Bolinha, BotaoPrincipal, Titulo } from '../UI'
 import {AiFillTwitterCircle, AiFillGoogleCircle, AiFillFacebook} from "react-icons/ai"
 const BoxForm = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+
     gap:2rem;
     justify-content: center;
     width: 50%;  

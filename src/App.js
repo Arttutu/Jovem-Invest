@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import {  Branco } from "./Components/UI/variaveis";
 import MenuMobile from "./Components/HeaderMobile";
 import { useState } from "react";
+import Rodape from "./Components/Rodape";
 
 const StylePage = styled.div`
   width: 100%;
@@ -28,6 +29,7 @@ function App() {
         <Main>
           <Banner/>
         </Main>
+        <Rodape />
       </StylePage>
     </>
   )

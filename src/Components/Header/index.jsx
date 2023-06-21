@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from 'styled-components'
-import { Branco, Font, VerdeEscuro2 } from '../UI/variaveis'
+import { Branco, Font, VerdeEscuro1, VerdeEscuro2 } from '../UI/variaveis'
 import { Box, Lista, Logo } from '../UI'
 import {RxHamburgerMenu} from "react-icons/rx"
 
@@ -48,7 +48,7 @@ export default function Header({setMenuOpen}) {
       <Box>
         <BoxNav>
           <BoxLogo>
-                <Logo>Home</Logo>  
+                <Logo>Fintech APP</Logo>  
                 <RxHamburgerMenu onClick={() => setMenuOpen(true)} />          
           </BoxLogo>
           <nav>
@@ -56,6 +56,7 @@ export default function Header({setMenuOpen}) {
                 <ListaItem>Login</ListaItem>
                 <ListaItem>Cadastre</ListaItem>
                 <ListaItem >SobreNós</ListaItem>
+                <ListaItem >Perfil</ListaItem>
                 
             </Lista>
           </nav>

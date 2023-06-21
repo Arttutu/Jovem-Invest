@@ -41,15 +41,17 @@ const Container = styled.div`
     ` : "")}
   
 `
-const NavListaMobile =styled.nav`
+const UlStyle = styled.ul`
   display: flex;
   flex-direction: column;
   list-style: none;
   gap: 2rem;
   padding-left: 2rem;
+`
+const NavListaMobile =styled.nav`
   transform: scale(0.7);
-  transition: .7s;
-  ${({menuopen}) => (menuopen  ? css`
+  transition: .7s;  
+ ${({menuopen}) => (menuopen  ? css`
       transform: scale(1);
     ` : "" )}
  
@@ -85,22 +87,21 @@ export default function MenuMobile({menuopen, setMenuOpen}) {
   return (
     <Container menuopen = {menuopen}>
       <BoxLogo>
-       <Logo>Home</Logo>
+       <Logo>
+        Fintech APP
+       </Logo>
       </BoxLogo>
       <IoClose size={35} color="#fff" onClick={() => setMenuOpen(false)}/>  
-      <nav>
+
         <NavListaMobile menuopen = {menuopen} >
-          <li>
-            <LinkMenuNav>Login</LinkMenuNav>
-          </li>
-          <li>
-            <LinkMenuNav>Cadastre</LinkMenuNav>
-          </li>
-          <li>
-            <LinkMenuNav>Sobre Nós</LinkMenuNav>
-          </li>
+          <UlStyle>
+              <LinkMenuNav>Login</LinkMenuNav>
+              <LinkMenuNav>Cadastre</LinkMenuNav>
+              <LinkMenuNav>Sobre Nós</LinkMenuNav>
+              <LinkMenuNav>Perfil</LinkMenuNav>
+          </UlStyle>
         </NavListaMobile>
-      </nav>
+    
     </Container>
   )
 }
