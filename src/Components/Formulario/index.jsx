@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import { Font, VerdeClaro2, VerdeEscuro1 } from '../UI/variaveis'
-import { BotaoPrincipal, Titulo } from '../UI'
+import { Bolinha, BotaoPrincipal, Titulo } from '../UI'
 import {AiFillTwitterCircle, AiFillGoogleCircle, AiFillFacebook} from "react-icons/ai"
 const BoxForm = styled.div`
     display: flex;
@@ -21,6 +21,7 @@ const FormStyle = styled.form`
 `
 const LabelStyle = styled.label`
     font-style: ${Font};
+    font-weight: bold;
     font-size: 1.5em;
 `
 const InputStyle = styled.input`
@@ -28,16 +29,20 @@ const InputStyle = styled.input`
    font-style: ${Font};
    width: 400px;
    margin: 0 auto;
-   height: auto;
+
    padding: 10px;
    box-sizing: border-box;
+   &:hover{
+    border: 3px solid ${VerdeEscuro1}
+   }
+ 
+
    @media (max-width:768px){
         width: 350px;
         
     }
 `
 const BoxIcones = styled.div`
-margin-top: 2em;
     display: flex;
     align-items: center;
     gap: 2em;
@@ -48,29 +53,43 @@ margin-top: 2em;
         color: ${VerdeEscuro1};
     }
 `
+const BoxSubmit = styled.div`
+    margin-top: 2em;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    @media (max-width: 768px){
+        flex-direction: column;
+    }
+`
+
 
 export default function Formulario() {
   return (
    <>
     <BoxForm>
-        <Titulo cadastro >Faça seu Cadastro</Titulo>
+        <Titulo cadastro="true" >Faça seu Cadastro</Titulo>
         <FormStyle>
             <LabelStyle >Nome Completo:</LabelStyle>
-            <InputStyle type="text" id="fname" name="fname" />
+            <InputStyle type="text"  placeholder='Seu nome completo'/>
             <LabelStyle>CPF:</LabelStyle>
-            <InputStyle type="number" id="lname" name="lname" />
+            <InputStyle type="number"   placeholder='xxx.xxx.xxx-xx' />
             <LabelStyle>Email:</LabelStyle>
-            <InputStyle type="email" id="lname" name="lname" />
+            <InputStyle type="email"  placeholder='name@dominio.com' />
             <LabelStyle >Criar uma Senha:</LabelStyle>
-            <InputStyle type="password" id="lname" name="lname" />
+            <InputStyle type="password"  placeholder='Senha de 8 dgítos' />
             <LabelStyle>Repita a senha:</LabelStyle>
-            <InputStyle type="password" id="lname" name="lname" />
-            <BoxIcones>
-                <AiFillFacebook />
-                <AiFillGoogleCircle />
-                <AiFillTwitterCircle />
-            <BotaoPrincipal>Enviar</BotaoPrincipal>
-            </BoxIcones>
+            <InputStyle type="password"   placeholder='Repita a senha' />
+            <BoxSubmit>
+                <BoxIcones>
+                    <AiFillFacebook />
+                    <AiFillGoogleCircle />
+                    <AiFillTwitterCircle />
+                </BoxIcones>
+                <BotaoPrincipal>Enviar<Bolinha /></BotaoPrincipal>
+                 
+                
+            </BoxSubmit>
         </FormStyle>
     </BoxForm>
   

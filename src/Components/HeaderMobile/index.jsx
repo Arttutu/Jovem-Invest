@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { IoClose } from 'react-icons/io5';
 import { css, styled } from 'styled-components';
 import { Branco, Font, VerdeEscuro2 } from '../UI/variaveis';
-import { Lista, Logo } from '../UI';
+import { Logo } from '../UI';
 
 const Container = styled.div`
     position: absolute;
@@ -30,7 +30,7 @@ const Container = styled.div`
       transition: all.7s;
     }
 
-    ${({menuopen}) => menuopen ?  css`
+    ${({menuopen}) =>(menuopen ?  css`
       opacity: 0.9;
       pointer-events: auto;
       transform: translateY(0px);
@@ -38,7 +38,7 @@ const Container = styled.div`
         transform: rotate(0deg);
     }
 
-    ` : ""}
+    ` : "")}
   
 `
 const NavListaMobile =styled.nav`
@@ -49,9 +49,9 @@ const NavListaMobile =styled.nav`
   padding-left: 2rem;
   transform: scale(0.7);
   transition: .7s;
-  ${({menuopen}) => menuopen  ? css`
+  ${({menuopen}) => (menuopen  ? css`
       transform: scale(1);
-    ` : "" }
+    ` : "" )}
  
 `
 const LinkMenuNav = styled.li`
@@ -67,9 +67,8 @@ const BoxLogo = styled.div`
 `
 
 export default function MenuMobile({menuopen, setMenuOpen}) {
-  // useEffect escuta o elemento menuopen e quando ele é modificado faz uma ação, overFlow hidden scroll vertical do body
   useEffect (() => {
-    document.body.style.overflowY =  menuopen ? "hidden" : "auto"
+    document.body.style.overflowY =  (menuopen ? "hidden" : "auto")
   }, [menuopen]);
   useEffect(() => {
     function Resize() {
@@ -77,7 +76,6 @@ export default function MenuMobile({menuopen, setMenuOpen}) {
         setMenuOpen(false);
       }
     }
-  // função callback ativada após o envento de resize
     window.addEventListener('resize', Resize);
   // Remove efeitos para nao ficar na memória
     return () => {
@@ -85,7 +83,7 @@ export default function MenuMobile({menuopen, setMenuOpen}) {
     };
   }, [menuopen, setMenuOpen]);
   return (
-    <Container menuopen = {menuopen} setMenuOpen = {setMenuOpen}>
+    <Container menuopen = {menuopen}>
       <BoxLogo>
        <Logo>Home</Logo>
       </BoxLogo>
