@@ -28,7 +28,7 @@ const BoxMensagem = styled.div `
     box-sizing: border-box;
     border-right: 5px solid ${VerdeEscuro2};
     @media (max-width:768px){
-        width: 100%;
+        width: 90%;
         border-right: none;
         border-bottom:5px solid ${VerdeEscuro2};
         padding-bottom: 50px;
