@@ -2,8 +2,9 @@ import React from 'react'
 import { Box, Imagem, Titulo } from '../UI'
 import { styled } from 'styled-components'
 import ImagemBanner from './banner.png'
-import Formulario from '../Formulario'
+
 import { VerdeEscuro2 } from '../UI/variaveis'
+import CaixaFormulario from '../CaixaFormulario'
 
 const BoxBanner = styled.div `
     height: 100%;
@@ -43,7 +44,7 @@ export default function Banner() {
                 <Titulo>O melhor APP de finanças do Brasil</Titulo>
                 <Imagem src={ImagemBanner}></Imagem>
             </BoxMensagem>
-            <Formulario />
+           <CaixaFormulario />
         </BoxBanner>
     </Box>
   )
