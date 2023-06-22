@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import { IoClose } from 'react-icons/io5';
 import { css, styled } from 'styled-components';
-import { Branco, Font, VerdeEscuro2 } from '../UI/variaveis';
+import { Branco, Font, VerdeClaro2, VerdeEscuro2 } from '../UI/variaveis';
 import { Logo } from '../UI';
+import { Link } from 'react-scroll';
 
-const Container = styled.div`
+const Container = styled.section`
     position: absolute;
     height: 80vh;
     width: 100%;
@@ -61,6 +62,11 @@ const LinkMenuNav = styled.li`
   text-transform: uppercase;
   font-family: ${Font};
   color: ${Branco};
+  cursor: pointer;
+  &:hover{
+    scale: 1.1;
+    color: ${VerdeClaro2};
+  }
 `
 const BoxLogo = styled.div`
   position: absolute;
@@ -88,7 +94,7 @@ export default function MenuMobile({menuopen, setMenuOpen}) {
     <Container menuopen = {menuopen}>
       <BoxLogo>
        <Logo>
-        Fintech APP
+          Jovem Ivest
        </Logo>
       </BoxLogo>
       <IoClose size={35} color="#fff" onClick={() => setMenuOpen(false)}/>  
@@ -97,7 +103,7 @@ export default function MenuMobile({menuopen, setMenuOpen}) {
           <UlStyle>
               <LinkMenuNav>Login</LinkMenuNav>
               <LinkMenuNav>Cadastre</LinkMenuNav>
-              <LinkMenuNav>Sobre Nós</LinkMenuNav>
+              <LinkMenuNav><Link to='sobre' smooth={true} duration={400}>SobreNós</Link></LinkMenuNav>
               <LinkMenuNav>Perfil</LinkMenuNav>
           </UlStyle>
         </NavListaMobile>

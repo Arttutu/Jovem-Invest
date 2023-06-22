@@ -7,10 +7,11 @@ export const Box = styled.div`
 `
 export const Titulo = styled.h1`
     color: ${VerdeEscuro2};
-    font-size: ${({cadastro}) => (cadastro == "true" ? "3em": "5em")};
-    font-style: ${Font};
-    text-align: center;
-    
+    font-size: ${({cadastro}) => (cadastro ? "3em": "4em")};
+    font-family: ${Font};
+    @media (max-width:768px){
+    font-size: ${({cadastro}) => (cadastro ? "2em" : "3em")};
+   }
 `
 export const BotaoPrincipal = styled.button`
     display: flex;
@@ -25,12 +26,13 @@ export const BotaoPrincipal = styled.button`
     font-size: 1.2em;
     font-family: ${Font};
     color: ${Branco};
-    transition: all.7s;
+    transition: all.5s;
     &:hover{
-        background-color: ${VerdeEscuro1};
+        background-color: ${VerdeClaro2};
+        color: ${VerdeEscuro2};
         scale: 1.1;
-
     }
+   
 `
 export const Lista = styled.ul`
     display: flex;
@@ -54,4 +56,13 @@ export const Bolinha = styled.div`
     width: 15px;
     height: 15px;
     border-radius: 100%;
+    transition: all.5s;
+    
+`
+export const Imagem = styled.img `
+    max-width: ${({sobre}) => (sobre ? "600px" : "400px")};
+    height: auto;
+   @media (max-width:768px){
+    max-width: ${({sobre}) => (sobre ? "300px" : "350px")};
+   }
 `

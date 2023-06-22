@@ -1,7 +1,7 @@
 import React from 'react'
-import { Box, Titulo } from '../UI'
+import { Box, Imagem, Titulo } from '../UI'
 import { styled } from 'styled-components'
-import ImagemBanner from './Business growth-bro (2).png'
+import ImagemBanner from './banner.png'
 import Formulario from '../Formulario'
 import { VerdeEscuro2 } from '../UI/variaveis'
 
@@ -34,11 +34,7 @@ const BoxMensagem = styled.div `
         margin-bottom: 50px;
     }
 `
-const Imagem = styled.img `
-    max-width: 400px;
-    height: auto;
-   
-`
+
 export default function Banner() {
   return (
     <Box>

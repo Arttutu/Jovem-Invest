@@ -1,0 +1,21 @@
+Como executar o código na sua Máquina? 
+
+
+1- Certifique-se de ter o Node.js instalado em seu sistema. 
+Você pode verificar isso digitando node -v em seu terminal. 
+Se não estiver instalado, faça o download e instale-o a partir do site oficial do Node.js. 
+
+2- No diretório raiz do seu projeto Fintech, abra um terminal ou prompt de comando. 
+
+3- Execute o comando npm install para instalar todas as dependências do projeto listadas 
+no arquivo package.json. Isso criará uma pasta node_modules com todas as dependências necessárias. 
+
+4- Após a conclusão da instalação das dependências, execute o comando npm start. 
+Isso iniciará o servidor de desenvolvimento e abrirá o projeto no navegador padrão. 
+
+Não Deu Certo ? Não se preucupe
+
+você pode vizualizar o projeto no site :  https://frontend-fintech.vercel.app/
+você pode olhar o meu código no github :  https://github.com/Arttutu/fintech  
+
+sinta-se avontande para ver o meu README.md também :>

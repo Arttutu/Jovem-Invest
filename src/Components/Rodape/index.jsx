@@ -1,6 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components'
-import {Branco, Font, VerdeEscuro1, VerdeEscuro2 } from '../UI/variaveis'
+import {Branco, Font, VerdeEscuro2 } from '../UI/variaveis'
+
 const StyledRodape = styled.footer`
     display: flex;
     align-items: center;

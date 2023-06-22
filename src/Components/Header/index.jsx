@@ -1,8 +1,10 @@
 import React from 'react'
 import { styled } from 'styled-components'
-import { Branco, Font, VerdeEscuro1, VerdeEscuro2 } from '../UI/variaveis'
+import { Branco, Font, VerdeClaro2, VerdeEscuro2 } from '../UI/variaveis'
 import { Box, Lista, Logo } from '../UI'
 import {RxHamburgerMenu} from "react-icons/rx"
+import SobreNos from '../SobreNos'
+import { Link } from 'react-scroll'
 
 const HeaderStyle = styled.header`
     width: 100%;
@@ -40,6 +42,10 @@ const ListaItem = styled.li`
     font-weight: normal;
     color: ${Branco};
     font-family: ${Font};
+    &:hover{
+    scale: 1.1;
+    color: ${VerdeClaro2};
+  }
 `
 
 export default function Header({setMenuOpen}) {
@@ -48,16 +54,15 @@ export default function Header({setMenuOpen}) {
       <Box>
         <BoxNav>
           <BoxLogo>
-                <Logo>Fintech APP</Logo>  
+                <Logo>Joven Invest</Logo>  
                 <RxHamburgerMenu onClick={() => setMenuOpen(true)} />          
           </BoxLogo>
           <nav>
             <Lista>
                 <ListaItem>Login</ListaItem>
                 <ListaItem>Cadastre</ListaItem>
-                <ListaItem >SobreNós</ListaItem>
+                <ListaItem ><Link to='sobre' smooth={true} duration={400}>SobreNós</Link></ListaItem>
                 <ListaItem >Perfil</ListaItem>
-                
             </Lista>
           </nav>
         </BoxNav>

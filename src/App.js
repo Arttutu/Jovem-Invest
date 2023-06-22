@@ -6,6 +6,7 @@ import {  Branco } from "./Components/UI/variaveis";
 import MenuMobile from "./Components/HeaderMobile";
 import { useState } from "react";
 import Rodape from "./Components/Rodape";
+import SobreNos from "./Components/SobreNos";
 
 const StylePage = styled.div`
   width: 100%;
@@ -13,11 +14,7 @@ const StylePage = styled.div`
   background-color: ${Branco};
 `
 
-const Main = styled.main`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`
+
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   return ( 
@@ -26,9 +23,10 @@ function App() {
       <StylePage>
         <MenuMobile  menuopen = {menuOpen} setMenuOpen = {setMenuOpen}/>
         <Header setMenuOpen = {setMenuOpen}/>
-        <Main>
+        <main>
           <Banner/>
-        </Main>
+          <SobreNos />
+        </main>
         <Rodape />
       </StylePage>
     </>

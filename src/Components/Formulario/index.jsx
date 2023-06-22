@@ -3,16 +3,16 @@ import { styled } from 'styled-components'
 import { Font, VerdeEscuro1 } from '../UI/variaveis'
 import { Bolinha, BotaoPrincipal, Titulo } from '../UI'
 import {AiFillTwitterCircle, AiFillGoogleCircle, AiFillFacebook} from "react-icons/ai"
-const BoxForm = styled.div`
+const BoxForm = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-
     gap:2rem;
     justify-content: center;
     width: 50%;  
     @media (max-width:768px){
         width: 100%;
+        margin: 0 20px;
     }
 `
 const FormStyle = styled.form`
@@ -30,16 +30,13 @@ const InputStyle = styled.input`
    font-style: ${Font};
    width: 400px;
    margin: 0 auto;
-
    padding: 10px;
    box-sizing: border-box;
    &:hover{
     border: 3px solid ${VerdeEscuro1}
    }
- 
-
    @media (max-width:768px){
-        width: 350px;
+        width: 300px;
         
     }
 `
@@ -69,7 +66,7 @@ export default function Formulario() {
   return (
    <>
     <BoxForm>
-        <Titulo cadastro="true" >Faça seu Cadastro</Titulo>
+        <Titulo cadastro>Faça seu Cadastro</Titulo>
         <FormStyle>
             <LabelStyle >Nome Completo:</LabelStyle>
             <InputStyle type="text"  placeholder='Seu nome completo'/>
