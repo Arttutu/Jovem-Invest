@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { Branco, Font, VerdeClaro2, VerdeEscuro1, VerdeEscuro2 } from "./variaveis";
+import { Branco, Font, VerdeClaro, VerdeClaro2, VerdeEscuro1, VerdeEscuro2 } from "./variaveis";
 
 export const Box = styled.div`
     max-width: 1440px;
@@ -20,7 +20,7 @@ export const BotaoPrincipal = styled.button`
     gap: 1em;
     width: 200px;
     padding: 10px;
-    background-color: ${VerdeEscuro2};
+    background-color: ${VerdeClaro};
     border: none;
     border-radius: 1em;
     font-size: 1.2em;
@@ -28,8 +28,8 @@ export const BotaoPrincipal = styled.button`
     color: ${Branco};
     transition: all.5s;
     &:hover{
-        background-color: ${VerdeClaro2};
-        color: ${VerdeEscuro2};
+        background-color: ${VerdeEscuro2};
+        color: ${VerdeClaro2};
         scale: 1.1;
     }
    

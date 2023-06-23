@@ -54,14 +54,14 @@ export default function Header({setMenuOpen}) {
       <Box>
         <BoxNav>
           <BoxLogo>
-                <Logo>Joven Invest</Logo>  
+                <Logo>Jovem Invest</Logo>  
                 <RxHamburgerMenu onClick={() => setMenuOpen(true)} />          
           </BoxLogo>
           <nav>
             <Lista>
                 <ListaItem>Login</ListaItem>
                 <ListaItem>Cadastre</ListaItem>
-                <ListaItem ><Link to='sobre' smooth={true} duration={400}>SobreNós</Link></ListaItem>
+                <ListaItem >SobreNós</ListaItem>
                 <ListaItem >Perfil</ListaItem>
             </Lista>
           </nav>

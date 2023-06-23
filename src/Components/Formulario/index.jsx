@@ -1,6 +1,6 @@
 import React from 'react'
 import { styled } from 'styled-components'
-import { Font, VerdeEscuro1 } from '../UI/variaveis'
+import { Font, VerdeEscuro1, VerdeEscuro2 } from '../UI/variaveis'
 import Submit from '../Submit'
 
 
@@ -18,15 +18,16 @@ const LabelStyle = styled.label`
 const InputStyle = styled.input`
    font-size: 1.3em;
    font-style: ${Font};
-   width: 400px;
+   width: 600px;
    margin: 0 auto;
    padding: 10px;
-   box-sizing: border-box;
+    border: 2px solid ${VerdeEscuro2};
+   border-radius: 20px;
    &:hover{
     border: 3px solid ${VerdeEscuro1}
    }
    @media (max-width:768px){
-        width: 300px;
+        max-width: 300px;
         
     }
 `

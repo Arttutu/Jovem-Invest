@@ -4,6 +4,15 @@ import { Bolinha, BotaoPrincipal } from '../UI'
 import { VerdeEscuro1 } from '../UI/variaveis'
 import { styled } from 'styled-components'
 
+const BoxSubmit = styled.div`
+    margin-top: 2em;
+    display: flex;
+    gap: 2em;
+    align-items: center;
+    @media (max-width: 768px){
+        flex-direction: column-reverse;
+    }
+`
 const BoxIcones = styled.div`
     display: flex;
     align-items: center;
@@ -15,15 +24,7 @@ const BoxIcones = styled.div`
         color: ${VerdeEscuro1};
     }
 `
-const BoxSubmit = styled.div`
-    margin-top: 2em;
-    display: flex;
-    gap: 2em;
-    align-items: center;
-    @media (max-width: 768px){
-        flex-direction: column;
-    }
-`
+
 
 export default function Submit() {
   return (

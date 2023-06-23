@@ -12,7 +12,8 @@ const BoxConteudo  =styled.section`
     justify-content: center;
     @media (max-width:769px){
         flex-direction: column;
-        margin: 100px 10px;
+        gap: 5rem;
+        margin: 100px 50px;
     }
 `
 const BoxDescricao = styled.div`
@@ -48,7 +49,7 @@ const Texto  = styled.p`
 export default function SobreNos() {
   return (
     <Box>
-        <Element name='sobre'>
+        <Element>
             <BoxConteudo>
                     <BoxDescricao>
                         <Titulo>Nossa História</Titulo>
@@ -65,7 +66,6 @@ export default function SobreNos() {
                     <BoxImagem>
                         <Imagem sobre src={ilustracao}/>
                     </BoxImagem>
-            
             </BoxConteudo>
        </Element>
        

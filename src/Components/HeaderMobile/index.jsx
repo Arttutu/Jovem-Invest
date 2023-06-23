@@ -66,6 +66,7 @@ const LinkMenuNav = styled.li`
   &:hover{
     scale: 1.1;
     color: ${VerdeClaro2};
+
   }
 `
 const BoxLogo = styled.div`
@@ -103,7 +104,7 @@ export default function MenuMobile({menuopen, setMenuOpen}) {
           <UlStyle>
               <LinkMenuNav>Login</LinkMenuNav>
               <LinkMenuNav>Cadastre</LinkMenuNav>
-              <LinkMenuNav><Link to='sobre' smooth={true} duration={400}>SobreNós</Link></LinkMenuNav>
+              <LinkMenuNav>SobreNós</LinkMenuNav>
               <LinkMenuNav>Perfil</LinkMenuNav>
           </UlStyle>
         </NavListaMobile>
