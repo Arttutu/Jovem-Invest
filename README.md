@@ -6,8 +6,8 @@ Aprendi como é o início e desenvolvimento de um software, desde a criação do
 
 ## Screenshots
 
-![App Screenshot](https://github.com/Arttutu/fintech/blob/master/public/design/telaInicial.png?raw=true)
-
+![App Screenshot](https://github.com/Arttutu/Jovem-Invest/blob/master/public/Screeshot/TelaInicial.png?raw=true)
+![App Screenshot](https://github.com/Arttutu/Jovem-Invest/blob/master/public/Screeshot/SobreNos.png?raw=true)
 
 ## Stack utilizada
 
