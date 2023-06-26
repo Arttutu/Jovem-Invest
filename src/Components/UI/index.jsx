@@ -62,6 +62,7 @@ export const Bolinha = styled.div`
 export const Imagem = styled.img `
     max-width: ${({sobre}) => (sobre ? "600px" : "400px")};
     height: auto;
+    filter:drop-shadow(10px 10px 10px #000000a0);
    @media (max-width:768px){
     max-width: ${({sobre}) => (sobre ? "300px" : "350px")};
    }

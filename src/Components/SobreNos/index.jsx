@@ -35,6 +35,7 @@ const BoxImagem = styled.div`
     justify-content: center;
     margin: 0 auto;
     max-width: 50%;
+
     @media (max-width:769px){
       max-width: 100%;
     }

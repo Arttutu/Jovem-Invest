@@ -11,8 +11,6 @@ const BoxBanner = styled.div `
     margin: 100px 0px;
     display: flex;
     align-items: center;
-
-    gap:2em;
     @media (max-width:768px){
         flex-direction: column;
     }

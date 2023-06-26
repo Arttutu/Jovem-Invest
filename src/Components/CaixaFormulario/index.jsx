@@ -2,6 +2,7 @@ import React from 'react'
 import { styled } from 'styled-components'
 import { Titulo } from '../UI'
 import Formulario from '../Formulario'
+import { VerdeEscuro2 } from '../UI/variaveis'
 
 
 const BoxForm = styled.section`
